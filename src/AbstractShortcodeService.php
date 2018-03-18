@@ -1,6 +1,6 @@
 <?php
 
-namespace WonderWp\Framework\Shortcode;
+namespace WonderWp\Component\Shortcode;
 
 abstract class AbstractShortcodeService implements ShortcodeServiceInterface
 {
