@@ -21,7 +21,7 @@
     "require-dev": {
     },
     "autoload": {
-        "psr-4": {"WonderWp\\Component\\ShortCode\\": "src"},
+        "psr-4": {"WonderWp\\Component\\Shortcode\\": "src"},
         "exclude-from-classmap": [
             "/tests/"
         ]
