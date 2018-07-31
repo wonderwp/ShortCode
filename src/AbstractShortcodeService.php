@@ -2,7 +2,9 @@
 
 namespace WonderWp\Component\Shortcode;
 
-abstract class AbstractShortcodeService implements ShortcodeServiceInterface
+use WonderWp\Component\Service\AbstractService;
+
+abstract class AbstractShortcodeService extends AbstractService implements ShortcodeServiceInterface
 {
 
 }
