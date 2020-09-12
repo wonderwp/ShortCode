@@ -2,11 +2,9 @@
 
 namespace WonderWp\Component\Shortcode;
 
-interface ShortcodeServiceInterface
+use WonderWp\Component\PluginSkeleton\Service\RegistrableInterface;
+
+interface ShortcodeServiceInterface extends RegistrableInterface
 {
-    /**
-     * Typically where you'll have all your add_shortcode calls
-     * @return mixed
-     */
-    public function registerShortcodes();
+
 }
