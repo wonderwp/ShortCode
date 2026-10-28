@@ -20,6 +20,12 @@ if ($autoload === null) {
     exit(1);
 }
 
+// AbstractShortcodeService → AbstractService needs PluginSkeleton; absent in isolated package CI.
+$skeletonTrait = dirname($autoload) . '/wonderwp/plugin-skeleton/src/ManagerAwareTrait.php';
+if (!is_file($skeletonTrait)) {
+    require_once __DIR__ . '/stub-plugin-skeleton.php';
+}
+
 require_once $autoload;
 
 spl_autoload_register(static function (string $class): void {
