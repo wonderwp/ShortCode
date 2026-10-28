@@ -2,7 +2,12 @@
   "name": "wonderwp/shortcode",
   "description": "WonderWp ShortCode Component",
   "type": "library",
-  "keywords": ["service", "shortcode","WonderWp","WordPress"],
+  "keywords": [
+    "service",
+    "shortcode",
+    "WonderWp",
+    "WordPress"
+  ],
   "homepage": "https://github.com/wonderwp/ShortCode",
   "license": "MIT",
   "authors": [
@@ -19,12 +24,24 @@
     "php": "^8.3"
   },
   "require-dev": {
+    "phpunit/phpunit": "^12.0",
+    "wonderwp/service": "dev-feature/php_8"
   },
   "autoload": {
-    "psr-4": {"WonderWp\\Component\\Shortcode\\": "src"},
+    "psr-4": {
+      "WonderWp\\Component\\Shortcode\\": "src"
+    },
     "exclude-from-classmap": [
       "/tests/"
     ]
   },
-  "minimum-stability": "dev"
+  "minimum-stability": "dev",
+  "autoload-dev": {
+    "psr-4": {
+      "WonderWp\\Component\\Shortcode\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit --configuration phpunit.xml.dist"
+  }
 }
